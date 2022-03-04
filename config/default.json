@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://farzam:farzam1234@cluster0.vjl4u.mongodb.net/appointment-wizard?retryWrites=true&w=majority"
+}

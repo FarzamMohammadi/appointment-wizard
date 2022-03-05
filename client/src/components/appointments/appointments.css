@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#appointments {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#appointments td,
+#appointments th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#appointments tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#appointments th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #4e7cf0;
+  color: rgb(0, 0, 0);
+}
+
+input[type='email'],
+input[type='datetime-local'],
+input[type='password'],
+input[type='text'] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+/* #appointments .button {
+  background-color: #000000;
+  color: black;
+  border: 1px solid #000000;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  padding: 6px 15px;
+  text-align: center;
+  margin: 5px 2px;
+  font-size: 16px;
+} */
+button {
+  background-color: #fcfcfc;
+  color: black;
+  border: 1px solid #000000;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  padding: 6px 15px;
+  text-align: center;
+  margin: 5px 2px;
+  font-size: 16px;
+}
+button:hover,
+button:active {
+  background-color: #bababa;
+  background-position: 0 0;
+  color: #000000;
+}
+
+.submit-button {
+  width: 100%;
+  background: #ff4742;
+  border: 1px solid #ff4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, 'proxima nova', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.submit-button:hover,
+.submit-button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #ff4742;
+}
+
+.submit-button:active {
+  opacity: 0.5;
+}

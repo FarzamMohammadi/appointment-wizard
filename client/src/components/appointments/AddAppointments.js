@@ -1,31 +1,34 @@
 import React, { useState, Component, Fragment } from 'react';
-import { useNavigate, Link, useParams } from 'react-router-dom';
-// import { createAppointment } from '../../actions/appointments';
-// import './appointments.css';
+import { useNavigate, Link } from 'react-router-dom';
+import { createAppointment } from '../../actions/appointments';
+import './appointments.css';
+
+const initialState = {
+  cardNumber: '',
+  vaccineSite: '',
+  priorityArea: '',
+  dateTime: '',
+  cancelled: 'false',
+};
 
 export default function AddAppointments() {
   let navigate = useNavigate();
   const [executed, setExecuted] = useState(false);
-  const [formData, setFormData] = useState({
-    cardNumber: '',
-    vaccineSite: '',
-    priorityArea: '',
-    dateTime: '',
-    cancelled: 'false',
-  });
+  const [formData, setFormData] = useState(initialState);
 
   const { cardNumber, vaccineSite, priorityArea, dateTime, cancelled } =
     formData;
 
   async function handleSubmit(e) {
     e.preventDefault();
-    // const appointmentCreatedPromise = await createAppointment(formData).then(
-    //   function (isCreated) {
-    //     if (isCreated) {
-    //       navigate('/list-appointments');
-    //     }
-    //   }
-    // );
+    const appointmentCreatedPromise = await createAppointment(formData).then(
+      function (isCreated) {
+        if (isCreated) {
+          navigate('/list-appointments');
+        }
+      }
+    );
+    setFormData(initialState);
   }
 
   const onChange = (e) =>

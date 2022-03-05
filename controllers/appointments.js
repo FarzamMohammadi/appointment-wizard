@@ -23,7 +23,7 @@ exports.create = async (req, res) => {
       cardNumber: cardNumber,
       vaccineSite: vaccineSite,
       priorityArea: priorityArea,
-      dateTime: Date.now(),
+      dateTime: dateTime,
       cancelled: false,
     });
     const appointment = await newAppointment.save();
